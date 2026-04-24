@@ -1,0 +1,272 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== GRID DIAMOND DECORATOR ===== */
+.grid-diamond {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--grid-line-strong);
+  transform: rotate(45deg);
+  background: var(--bg);
+  z-index: 2;
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 100px 24px 32px;
+  position: relative;
+  border-bottom: 1px solid var(--grid-line);
+}
+
+/* diamonds at hero bottom corners */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--grid-line-strong);
+  transform: rotate(45deg);
+  background: var(--bg);
+}
+.hero::before { left: 76px; }
+.hero::after { right: 76px; }
+
+.hero-logo {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.hero-logo span {
+  color: var(--accent);
+}
+
+.hero-tagline {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== SEARCH SECTION ===== */
+.search-section {
+  padding: 32px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+/* ===== COMPARE BUTTON ===== */
+.compare-btn-container {
+  text-align: center;
+  padding: 4px 24px 8px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.compare-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border: 1px solid var(--grid-line-strong);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.compare-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dark);
+}
+
+/* ===== RESULTS ===== */
+.results-area {
+  flex: 1;
+  padding: 32px 80px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.results-grid {
+  display: grid;
+  gap: 0;
+}
+
+.results-grid.single {
+  grid-template-columns: 1fr;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.results-grid.compare {
+  grid-template-columns: 1fr 1fr;
+}
+
+.drug-column {
+  animation: fadeIn 0.4s ease-out;
+  padding: 0;
+}
+
+.drug-column:first-child {
+  border-right: 1px solid var(--grid-line);
+  padding-right: 32px;
+}
+
+.drug-column:last-child {
+  padding-left: 32px;
+}
+
+.drug-name-chip {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  background: var(--accent-dark);
+}
+
+/* ===== SECTION DIVIDERS ===== */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--grid-line);
+  position: relative;
+  margin: 0;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--grid-line-strong);
+  transform: rotate(45deg);
+  background: var(--bg);
+}
+.section-divider::before { left: -4px; }
+.section-divider::after { right: -4px; }
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: auto;
+  padding: 24px 80px;
+  border-top: 1px solid var(--grid-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: relative;
+}
+
+/* diamonds at footer top */
+.footer::before,
+.footer::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--grid-line-strong);
+  transform: rotate(45deg);
+  background: var(--bg);
+}
+.footer::before { left: 76px; }
+.footer::after { right: 76px; }
+
+.footer-text {
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  max-width: 540px;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+.print-btn {
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid var(--grid-line-strong);
+  color: var(--text-secondary);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.print-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dark);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 64px 20px 24px;
+  }
+  .hero::before { left: 16px; }
+  .hero::after { right: 16px; }
+
+  .hero-logo {
+    font-size: 2.2rem;
+  }
+
+  .results-area {
+    padding: 24px 20px;
+  }
+
+  .results-grid.compare {
+    grid-template-columns: 1fr;
+  }
+
+  .drug-column:first-child {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid var(--grid-line);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+
+  .drug-column:last-child {
+    padding-left: 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .footer::before { left: 16px; }
+  .footer::after { right: 16px; }
+}

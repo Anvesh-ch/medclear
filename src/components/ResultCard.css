@@ -1,0 +1,79 @@
+.result-card {
+  background: #f5f3ef;
+  padding: 24px 28px;
+  margin-bottom: 12px;
+  position: relative;
+  transition: background 0.2s ease;
+}
+
+.result-card:hover {
+  background: #edeae4;
+}
+
+/* Colored left accent — inset bar */
+.result-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+}
+
+.result-card.border-blue::before { background: var(--card-blue); }
+.result-card.border-green::before { background: var(--card-green); }
+.result-card.border-yellow::before { background: var(--card-amber); }
+.result-card.border-orange::before { background: var(--card-terra); }
+.result-card.border-red::before { background: var(--card-red); }
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.card-index {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: #8a8580;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.card-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  letter-spacing: -0.2px;
+}
+
+.card-text {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: #3d3d3d;
+  padding-left: 0;
+}
+
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #2a6a8a;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  text-decoration: dotted underline;
+  text-underline-offset: 4px;
+}
+
+.toggle-btn:hover {
+  opacity: 0.7;
+}

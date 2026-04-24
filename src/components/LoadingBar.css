@@ -1,0 +1,34 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 56px 24px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.loading-bar-track {
+  width: 100%;
+  max-width: 240px;
+  height: 2px;
+  background: var(--grid-line);
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background: var(--accent);
+  animation: slideProgress 1.4s ease-in-out infinite;
+}
+
+.loading-text {
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
