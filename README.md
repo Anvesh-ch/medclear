@@ -2,6 +2,8 @@
 
 MedClear is a modern, high-end, editorial-style web application that translates complex FDA medication labels into plain English. It is intentionally designed to be clean, readable, and accessible for patients and caregivers who are confused by clinical medication labels.
 
+**Live Demo**: [https://medclear-phi.vercel.app](https://medclear-phi.vercel.app)
+
 ## Features
 
 - **Search**: Search for any medication by brand or generic name.
