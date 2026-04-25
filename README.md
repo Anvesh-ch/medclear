@@ -34,9 +34,13 @@ You must have Node.js installed.
    ```
 
 3. Setup Environment Variables:
-   Create a `.env` file in the root directory and add your Groq API key:
+   To use the "Ask MedClear AI" feature, you need a free Groq API key:
+   - Go to [GroqCloud](https://console.groq.com/keys) and create a free account.
+   - Click "Create API Key" and copy the generated key.
+   - Create a `.env` file in the root directory of this project.
+   - Add your key to the file like this:
    ```
-   VITE_GROQ_API_KEY=your_groq_api_key_here
+   VITE_GROQ_API_KEY=gsk_your_groq_api_key_here
    ```
 
 4. Run the Dev Server:
